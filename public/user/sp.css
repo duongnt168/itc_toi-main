@@ -1,0 +1,185 @@
+.body {
+  font-family: Arial, sans-serif;
+}
+.navbar-brand {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 24 px;
+  transition: 0.3 color;
+}
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+.nav-link {
+  color: #c3c0c0;
+  font-weight: 500;
+  position: relative;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+/* CSS căn chỉnh ảnh và hiệu ứng */
+
+.card {
+  transition: transform 0.2s;
+  border-radius: 15px;
+  overflow: hidden; /* Giữ nội dung trong thẻ không tràn ra ngoài */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+.card img {
+  width: 100%;
+  height: 180px; /* Đặt chiều cao cố định để ảnh đồng đều */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+.thumbnail-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thumbnail-wrapper img {
+  margin-top: 5px;
+}
+.product-info-container {
+  padding: 20px;
+}
+.product-info h4 {
+  color: red;
+}
+.product-info strong {
+  color: green;
+}
+.product-info .highlight {
+  color: #006400;
+  font-weight: bold;
+}
+.product-info .contact-info {
+  color: red;
+  font-weight: bold;
+}
+.nav-tabs .nav-link {
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+}
+.nav-tabs .nav-link.active {
+  background-color: #c2e17e;
+  color: white;
+}
+.suggested-products a {
+  color: #006400;
+  text-decoration: none;
+  font-weight: bold;
+}
+.suggested-products a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: auto;
+}
+.fa-heart {
+  color: red;
+}
+.fa-shopping-cart {
+  color: #23a954;
+}
+
+.fa-heart:hover,
+.fa-shopping-cart:hover {
+  color: red;
+}
+.card {
+  transition: transform 0.2s;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative; /* Thêm để các phần tử con như overlay có thể định vị tuyệt đối */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Hiển thị overlay khi hover vào card */
+.card:hover .overlay-buttons {
+  transform: translate(-50%, -50%) scale(1); /* Hiển thị overlay với hiệu ứng phóng to */
+}
+
+.overlay-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Ẩn và thu nhỏ mặc định */
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+.pagination {
+  margin: 30px 0;
+}
+
+.pagination .page-link {
+  color: #fff;
+  background-color: #28a745; /* Màu xanh hiện đại */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+  background-color: #218838; /* Màu đậm hơn khi hover */
+  color: #fff;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #155724; /* Màu xanh đậm để nổi bật */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: #6c757d; /* Màu xám trung tính */
+  color: #fff;
+}
+
+.pagination .page-item {
+  margin: 0 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng nhẹ */
+}
+
+.pagination .page-link {
+  text-decoration: none;
+}

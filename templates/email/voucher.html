@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chào mừng bạn đến với AquaGarden</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+        }
+        .voucher-box {
+            background: #fff;
+            border: 2px dashed #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .voucher-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+            background: #e8f5e8;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffc107;
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌿 Chào mừng bạn đến với AquaGarden! 🌿</h1>
+        <p>Cảm ơn bạn đã đăng ký nhận thông tin khuyến mãi</p>
+    </div>
+    
+    <div class="content">
+        <h2>Xin chào {{EMAIL}},</h2>
+        
+        <p>Chúng tôi rất vui mừng chào đón bạn gia nhập cộng đồng AquaGarden! Để tri ân sự quan tâm của bạn, chúng tôi gửi tặng bạn một mã giảm giá đặc biệt:</p>
+        
+        <div class="voucher-box">
+            <h3>🎁 Mã giảm giá đặc biệt</h3>
+            <div class="voucher-code">{{VOUCHER_CODE}}</div>
+            <p><strong>Giảm {{DISCOUNT_VALUE}}% cho đơn hàng đầu tiên</strong></p>
+            <p>Có hiệu lực đến: {{EXPIRY_DATE}}</p>
+            <p><em>Áp dụng cho tất cả sản phẩm tại AquaGarden</em></p>
+        </div>
+        
+        <p>Hãy khám phá bộ sưu tập cây cảnh, terrarium và phụ kiện trang trí độc đáo của chúng tôi:</p>
+        
+        <div style="text-align: center;">
+            <a href="http://localhost/?c=product&v=index" class="btn">Mua sắm ngay</a>
+        </div>
+        
+        <h3>🌱 Tại sao chọn AquaGarden?</h3>
+        <ul>
+            <li>✅ Hơn 10 năm kinh nghiệm trong ngành cây cảnh</li>
+            <li>✅ Sản phẩm chất lượng cao, đa dạng mẫu mã</li>
+            <li>✅ Tư vấn chuyên nghiệp, hỗ trợ 24/7</li>
+            <li>✅ Giao hàng nhanh chóng, đóng gói cẩn thận</li>
+            <li>✅ Chính sách đổi trả linh hoạt</li>
+        </ul>
+        
+        <p>Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại liên hệ với chúng tôi qua:</p>
+        <ul>
+            <li>📞 Hotline: 058.8888.729</li>
+            <li>📧 Email: support@aquagarden.vn</li>
+            <li>📍 Địa chỉ: 12 Trịnh Đình Thảo</li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        <p>Email này được gửi tự động, vui lòng không trả lời.</p>
+        <p>© 2024 AquaGarden. Tất cả quyền được bảo lưu.</p>
+        <p>Nếu bạn không muốn nhận email này nữa, <a href="{{UNSUBSCRIBE_URL}}">hủy đăng ký tại đây</a></p>
+    </div>
+</body>
+</html>
